@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #362020;
+            padding: 20px; /* Adjusted for smaller screens */
+        }
+        .container {
+            background-color: rgb(157, 2, 2);
+            padding: 22px;
+            border-radius: 70px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            max-width: 90%; /* Restricting max-width */
+            margin: auto; /* Center the container */
+        }
+        .hidden {
+            display: none;
+        }
+        h1 {
+            color: rgb(224, 172, 105);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 35px;
+            background-color: rgb(91, 114, 8);
+            margin: 0 auto;
+            text-shadow: #000000;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 2.5rem; /* Responsive font size */
+        }
+        #celebrationVideo {
+            display: none;
+            width: 100%; /* Responsive width */
+            height: auto; /* Maintain aspect ratio */
+            max-width: 720px;
+            margin: 20px auto;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            border-radius: 35px;
+            background-color: #FFF9C4;
+        }
+        .image-container {
+            max-width: 100%; /* Ensure image fits in smaller screens */
+            overflow: hidden; /* Hide overflow */
+        }
+        img {
+            width: 100%; /* Responsive image */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 50px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .surMessage {
+            color: #FFFFFF;
+            font-family: 'Lobster';
+            font-size: 1.8em;
+            font-weight: bold;
+            padding: 15px 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            width: fit-content;
+            margin: 20px auto 0;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        button {
+            background-color: #FFA500;
+            color: black;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 25px;
+            padding: 15px 30px;
+            font-size: 1.4em; /* Responsive font size */
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem; /* Smaller font for mobile */
+            }
+            button {
+                padding: 10px 20px; /* Smaller button padding */
+                font-size: 1.2em; /* Smaller button font size */
+            }
+            .surMessage {
+                font-size: 1.5em; /* Smaller message font */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎂 Happy Birthday, Raina Didi! 🎂</h1>
+        <h2 style="color: darkgoldenrod; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">🌿You are the best Anniki in the World!🌿</h2>
+        <div class="image-container">
+            <img src="IMG-20230216-WA0136.jpg" alt="Happy Birthday">
+        </div>
+        <h2 style="color: antiquewhite; font-family: Georgia, 'Times New Roman', Times, serif; text-shadow: yellow;">🌺 I wanna see myself writing this code again at your 93rd Birthday! I hope you live a Big and Long life. 🌺</h2>
+
+        <button onclick="showMessage()" onmouseover="this.style.backgroundColor='#FF8C00';" onmouseout="this.style.backgroundColor='#FFA500';">Click for a Surprise! 🎁</button>
+
+        <div id="surpriseMessage" class="hidden">
+            <div class="surMessage"><p>Thank You for Existing! 💖</p></div>
+            <div class="video-container">
+                <video id="celebrationVideo" controls>
+                    <source src="siblings in every verse.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+    <script>
+        function showMessage() {
+            const surpriseMessage = document.getElementById('surpriseMessage');
+            const celebrationVideo = document.getElementById('celebrationVideo');
+
+            surpriseMessage.classList.toggle('hidden');
+            celebrationVideo.style.display = 'block';
+            celebrationVideo.play();
+        }
+    </script>
+</body>
+</html>
